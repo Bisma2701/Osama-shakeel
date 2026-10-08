@@ -72,11 +72,11 @@
     .stat-num { font-size:1.6rem; font-weight:800; color:#111827; line-height:1; }
     .stat-label { font-size:11px; color:#9ca3af; font-weight:500; margin-top:6px; }
     .hero-photo-wrap { display:flex; justify-content:center; align-items:center; }
-    .hero-photo-circle { width:380px; height:380px; border-radius:50%; padding:4px; background:linear-gradient(135deg,#2563EB,#14B8A6,#2563EB); position:relative; }
-    .hero-photo-inner { width:100%; height:100%; border-radius:50%; overflow:hidden; border:6px solid white; }
-    .hero-photo-inner img { width:100%; height:100%; object-fit:cover; object-position:center top; }
-    .hero-photo-glow { position:absolute; inset:-20px; border-radius:50%; background:radial-gradient(ellipse,rgba(37,99,235,.2) 0%,rgba(20,184,166,.15) 50%,transparent 70%); filter:blur(32px); z-index:-1; }
-    @media (max-width:767px) { .hero-photo-circle { width:280px; height:280px; } }
+    .hero-photo-circle { width:380px; position:relative; }
+    .hero-photo-inner { width:100%; overflow:hidden; }
+    .hero-photo-inner img { width:100%; height:auto; object-fit:contain; display:block; filter:drop-shadow(0 30px 60px rgba(0,0,0,0.18)); }
+    .hero-photo-glow { position:absolute; inset:-20px; background:radial-gradient(ellipse,rgba(37,99,235,.15) 0%,rgba(20,184,166,.1) 50%,transparent 70%); filter:blur(40px); z-index:-1; }
+    @media (max-width:767px) { .hero-photo-circle { width:260px; } }
     /* ABOUT */
     .section-about { padding:112px 0; background:#F9FAFB; }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
@@ -311,11 +311,11 @@
         </div>
       </div>
       <div class="hero-photo-wrap fade-in" style="transition-delay:.15s">
-        <div style="position:relative;">
+        <div style="position:relative;display:flex;justify-content:center;align-items:center;">
           <div class="hero-photo-glow"></div>
           <div class="hero-photo-circle">
             <div class="hero-photo-inner">
-              <img src="osama.jpg" alt="Osama Shakeel - AI Solutions Architect" />
+              <img src="mob1.jpg" alt="Automation Dashboard App" />
             </div>
           </div>
         </div>
@@ -430,7 +430,8 @@
   <div class="projects-container">
     <div class="fade-in" style="margin-bottom:40px;">
       <span class="section-label">Projects</span>
-      <h2 class="section-title" style="max-width:480px;margin-top:12px;">AI systems and software built for real business outcomes</h2>
+      <h2 class="section-title" style="max-width:480px;margin-top:12px;">
+        AI systems and software built for real business outcomes</h2>
     </div>
     <div class="projects-tabs fade-in" style="transition-delay:.1s">
       <button class="tab-btn active" id="tab-auto" onclick="switchTab('auto')">Automation Deliverables</button>
@@ -441,7 +442,7 @@
     <div class="auto-projects-list" id="auto-list">
       <div class="project-card row fade-in" style="transition-delay:.15s">
         <div class="project-img-wrap">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#0891B2,#06B6D4);display:flex;align-items:center;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <img src="project 1.jpg" alt="RevOps Pipeline Dashboard" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
           <span class="project-category" style="background:#0891B2">RevOps Automation</span>
         </div>
         <div class="project-content">
@@ -454,20 +455,27 @@
       </div>
       <div class="project-card row-reverse fade-in" style="transition-delay:.2s">
         <div class="project-img-wrap">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#2563EB,#3B82F6);display:flex;align-items:center;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/></svg></div>
+          <img src="project 2.jpg" alt="CRM Contacts Dashboard" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
           <span class="project-category" style="background:#2563EB">Sales Automation</span>
         </div>
         <div class="project-content">
           <div class="project-num" style="color:#2563EB">02</div>
           <h3>Full-Funnel AI Lead Sourcing, Enrichment &amp; Personalized Outreach Automation</h3>
-          <p>n8n workflow that sources, verifies, and enriches leads, then sends Claude-personalized outreach with automatic 3-day follow-ups and CRM sync.</p>
-          <div class="project-tags"><span class="tag">n8n</span><span class="tag">Claude</span><span class="tag">Apollo</span><span class="tag">ZeroBounce</span><span class="tag" style="color:#9ca3af">+3 more</span></div>
-          <a href="https://github.com/OsamaShakeel76" target="_blank" class="project-link" style="color:#2563EB">See more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <p>n8n workflow that sources, verifies, and enriches leads, then sends 
+            Claude-personalized outreach with automatic 3-day follow-ups and CRM sync.
+          </p>
+          <div class="project-tags"><span class="tag">n8n</span><span class="tag">
+            Claude</span><span class="tag">Apollo</span>
+            <span class="tag">ZeroBounce</span>
+            <span class="tag" style="color:#9ca3af">+3 more</span></div>
+          <a href="https://github.com/OsamaShakeel76" target="_blank" 
+          class="project-link" style="color:#2563EB">See more 
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
         </div>
       </div>
       <div class="project-card row fade-in" style="transition-delay:.25s">
         <div class="project-img-wrap">
-          <div style="width:100%;height:100%;background:linear-gradient(135deg,#DB2777,#EC4899);display:flex;align-items:center;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <img src="project 3.jpg" alt="Wise Pelican RevOps Dashboard" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
           <span class="project-category" style="background:#DB2777">RevOps Automation</span>
         </div>
         <div class="project-content">
@@ -482,7 +490,7 @@
       <div class="extra-projects" id="extra-auto">
         <div class="project-card row fade-in">
           <div class="project-img-wrap">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#10B981,#34D399);display:flex;align-items:center;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/></svg></div>
+            <img src="project 4.jpg" alt="AI Customer Support Agent" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
             <span class="project-category" style="background:#10B981">AI Agent</span>
           </div>
           <div class="project-content">
@@ -495,7 +503,7 @@
         </div>
         <div class="project-card row-reverse fade-in" style="transition-delay:.05s">
           <div class="project-img-wrap">
-            <div style="width:100%;height:100%;background:linear-gradient(135deg,#6366F1,#818CF8);display:flex;align-items:center;justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div>
+            <img src="project 5.jpg" alt="Real-Time Operations Dashboard" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" />
             <span class="project-category" style="background:#6366F1">Dashboard</span>
           </div>
           <div class="project-content">
