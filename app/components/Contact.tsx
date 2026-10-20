@@ -82,8 +82,8 @@ export default function Contact() {
                 {
                   icon: GitBranch,
                   label: "GitHub",
-                 value: "github.com/osama-shakeel56",
-                 href: "https://github.com/osama-shakeel56",
+                 value: "github.com/ShakeelOsama",
+                 href: "https://github.com/ShakeelOsama",
                   color: "#111827",
                 },
               ].map((link) => (
