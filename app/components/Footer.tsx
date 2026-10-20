@@ -3,7 +3,7 @@ import { LinkedInIcon, GitHubIcon } from "./icons";
 
 const socials = [
   { icon: LinkedInIcon, href: "https://www.linkedin.com/in/osama-shakeel-4777b318a-4777b318a/", label: "LinkedIn" },
-  { icon: GitHubIcon, href: "https://github.com/osama-shakeel56", label: "GitHub" },
+  { icon: GitHubIcon, href: "https://github.com/ShakeelOsama", label: "GitHub" },
   { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=shakeelosama76@gmail.com", label: "Email" },
 ];
 
