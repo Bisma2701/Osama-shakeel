@@ -14,7 +14,7 @@ const fadeUp = {
 };
 
 const stats = [
-  { value: "4+", label: "Years Experience" },
+  { value: "10+", label: "Years Experience" },
   { value: "50+", label: "Systems Built" },
   { value: "99.8%", label: "Client Uptime" },
 ];
