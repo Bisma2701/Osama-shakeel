@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const highlights = [
-  "4+ years of software engineering",
+  "10+ years of software engineering",
   "AI & machine learning integration",
   "Business process automation",
   "Custom SaaS platform development",
@@ -17,7 +17,7 @@ const highlights = [
 ];
 
 const metrics = [
-  { value: "4+", label: "Years Engineering" },
+  { value: "20+", label: "Years Engineering" },
   { value: "50+", label: "Systems Built" },
   { value: "10x", label: "Avg. Efficiency Gain" },
   { value: "∞", label: "Scalability" },
@@ -49,7 +49,7 @@ export default function About() {
               free teams from repetitive work.
             </p>
             <p className="mt-4 text-gray-500 leading-relaxed text-[15px]">
-              With 4+ years of software engineering experience, I combine deep
+              With 10+ years of software engineering experience, I combine deep
               technical expertise with a business-first mindset. Every system I
               build is engineered for reliability, scalability, and measurable
               outcomes, not just functionality.
