@@ -17,7 +17,7 @@ const highlights = [
 ];
 
 const metrics = [
-  { value: "20+", label: "Years Engineering" },
+  { value: "10+", label: "Years Engineering" },
   { value: "50+", label: "Systems Built" },
   { value: "10x", label: "Avg. Efficiency Gain" },
   { value: "∞", label: "Scalability" },
